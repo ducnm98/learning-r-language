@@ -4,4 +4,6 @@ This repository is created to help me learning R Languages. During the learning 
 - Books: R Graphics Cookbook
 
 
-This repository will use both language English and Vietnamese
+This repository will use both language English and Vietnamese.
+If you have any questions please ask me at:
+ * Email: ducnm.john98@gmail.com 
