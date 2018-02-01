@@ -40,9 +40,22 @@ data = c(1,2,2,3,1,3,2,3,1,2,3,2,3,2)
 fdata = factor(data)
 #Output is levels: 1, 2, 3 (with 1, 2, 3 are factors of data)
 
-
-
+#If we want to group some type of variables, we can use cut function
+demo3 = demo
+demo3$incat <- cut(demo3$income,c(-Inf, 150, 300, Inf), c("Low income", "Medium income", "High income"))
+#To make it more clearly
+demo3$incat <- cut(demo3$income, breaks = c(-Inf, 150, 300, Inf), labels = c("Low income", "Medium income", "High income"))
 View(demo3)
 
+#Sorting variables
+#Default ss ascending
+demo2 <- demo[order(demo$income, demo$age),]
 
+#Descending 
+demo2 <- demo[order(-demo$income),]
 View(demo2)
+
+#Add new variables and calculate on it
+math <- read.csv("math.csv")
+math$avg = (math$grade1 + math$grade2) / 2
+View(math)
